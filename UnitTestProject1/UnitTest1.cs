@@ -1,5 +1,6 @@
 using ClassLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace UnitTestProject1
 {
@@ -32,6 +33,29 @@ namespace UnitTestProject1
         {
             MC NewCar = new MC();
             Assert.AreEqual("MC", NewCar.VehicleType());
+        }
+
+        [TestMethod]
+        public void CheckPlate()
+        {
+            MC NewCar = new MC();
+            NewCar.SetLicensePlate("xxxxxxx");
+            Assert.AreEqual("xxxxxxx", NewCar.Licenseplate);
+        }
+
+        [TestMethod]
+        public void CheckPlate2()
+        {
+            MC NewCar = new MC();
+            try
+            {
+                NewCar.SetLicensePlate("xxxxxxxxxxx");
+            }
+            catch(ArgumentOutOfRangeException)
+            {
+                return;
+            }
+            Assert.Fail();
         }
     }
 }

@@ -6,6 +6,19 @@ namespace ClassLibrary
     {
         public string Licenseplate;
         public DateTime Date;
+        public bool brobizz;
+
+        public void SetLicensePlate(string plate)
+        {
+            if(plate.Length > 7)
+            {
+                throw (new ArgumentOutOfRangeException("Licenseplate"));
+            }
+            else
+            {
+                Licenseplate = plate;
+            }
+        }
 
         /// <summary>
         /// Returns the price of the Car
