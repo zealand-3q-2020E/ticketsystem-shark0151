@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\GitHub\ticketsystem-shark0151\ClassLibrary\ClassLibrary.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>

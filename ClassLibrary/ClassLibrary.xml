@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="F:ClassLibrary.Vehicle.Licenseplate">
+            <summary>
+            It's the license plate
+            </summary>
+        </member>
+        <member name="F:ClassLibrary.Vehicle.Date">
+            <summary>
+            It's the Date of the ticket
+            </summary>
+        </member>
+        <member name="F:ClassLibrary.Vehicle.brobizz">
+            <summary>
+            Wether or not the costumer has a brobizz discount, bro
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Vehicle.Price">
+            <summary>
+            Returns the price of the vehicle with discounts
+            </summary>
+            <returns> price - discount </returns>
+        </member>
+        <member name="M:ClassLibrary.Vehicle.VehicleType">
+            <summary>
+            Returns the Type of vehicke
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

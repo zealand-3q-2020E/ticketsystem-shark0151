@@ -4,8 +4,17 @@ namespace ClassLibrary
 {
     public abstract class Vehicle
     {
+        /// <summary>
+        /// It's the license plate
+        /// </summary>
         public string Licenseplate;
+        /// <summary>
+        /// It's the Date of the ticket
+        /// </summary>
         public DateTime Date;
+        /// <summary>
+        /// Wether or not the costumer has a brobizz discount, bro
+        /// </summary>
         public bool brobizz = false;
 
         public void SetLicensePlate(string plate)
@@ -26,9 +35,9 @@ namespace ClassLibrary
         }
 
         /// <summary>
-        /// Returns the price of the Car
+        /// Returns the price of the vehicle with discounts
         /// </summary>
-        /// <returns></returns>
+        /// <returns> price - discount </returns>
         public abstract double Price();
         
 
