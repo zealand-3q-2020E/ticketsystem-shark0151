@@ -44,7 +44,8 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void CheckPlate2()
+
+        public void CheckPlateFail()
         {
             MC NewCar = new MC();
             try
@@ -56,6 +57,22 @@ namespace UnitTestProject1
                 return;
             }
             Assert.Fail();
+        }
+
+        [TestMethod]
+        public void CheckCarPriceBro()
+        {
+            Car NewCar = new Car();
+            NewCar.SetBro(true);
+            Assert.AreEqual(228, NewCar.Price(), 0.01);
+        }
+
+        [TestMethod]
+        public void CheckMCPriceBro()
+        {
+            MC NewCar = new MC();
+            NewCar.SetBro(true);
+            Assert.AreEqual(118.75, NewCar.Price(), 0.01);
         }
     }
 }

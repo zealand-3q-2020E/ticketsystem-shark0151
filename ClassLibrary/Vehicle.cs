@@ -6,7 +6,7 @@ namespace ClassLibrary
     {
         public string Licenseplate;
         public DateTime Date;
-        public bool brobizz;
+        public bool brobizz = false;
 
         public void SetLicensePlate(string plate)
         {
@@ -18,6 +18,11 @@ namespace ClassLibrary
             {
                 Licenseplate = plate;
             }
+        }
+
+        public void SetBro(bool NewBro)
+        {
+            brobizz = NewBro;
         }
 
         /// <summary>
@@ -38,7 +43,7 @@ namespace ClassLibrary
     {
         public override double Price()
         {
-            return 240;
+            return 240 - Convert.ToInt32(brobizz)*(240*5/100);
         }
 
         public override string VehicleType()
@@ -51,7 +56,7 @@ namespace ClassLibrary
     {
         public override double Price()
         {
-            return 125;
+            return 125.0 - Convert.ToDouble(brobizz) * (125.0 * 5.0 / 100.0);
         }
 
         public override string VehicleType()
